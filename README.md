@@ -1,74 +1,10 @@
-# Data analysis
-- Document here the project: Hatred_Tweet
-- Description: Project Description
-- Data Source:
-- Type of analysis:
+This repository corresponds to a model for detecting hateful tweets.
 
-Please document the project the better you can.
+You will be able to find the different pipelines regrouping the different models used (Machine Learning and Deep Learning).
 
-# Startup the project
+These models were then trained on the Kaggle database "Hatred on Twitter During MeToo Movement".
+https://www.kaggle.com/rahulgoel1106/hatred-on-twitter-during-metoo-movement
 
-The initial setup.
+The database has been cleaned and preprocessed with the functions written in the clean_text file.
 
-Create virtualenv and install the project:
-```bash
-sudo apt-get install virtualenv python-pip python-dev
-deactivate; virtualenv ~/venv ; source ~/venv/bin/activate ;\
-    pip install pip -U; pip install -r requirements.txt
-```
-
-Unittest test:
-```bash
-make clean install test
-```
-
-Check for Hatred_Tweet in gitlab.com/{group}.
-If your project is not set please add it:
-
-- Create a new project on `gitlab.com/{group}/Hatred_Tweet`
-- Then populate it:
-
-```bash
-##   e.g. if group is "{group}" and project_name is "Hatred_Tweet"
-git remote add origin git@github.com:{group}/Hatred_Tweet.git
-git push -u origin master
-git push -u origin --tags
-```
-
-Functionnal test with a script:
-
-```bash
-cd
-mkdir tmp
-cd tmp
-Hatred_Tweet-run
-```
-
-# Install
-
-Go to `https://github.com/{group}/Hatred_Tweet` to see the project, manage issues,
-setup you ssh public key, ...
-
-Create a python3 virtualenv and activate it:
-
-```bash
-sudo apt-get install virtualenv python-pip python-dev
-deactivate; virtualenv -ppython3 ~/venv ; source ~/venv/bin/activate
-```
-
-Clone the project and install it:
-
-```bash
-git clone git@github.com:{group}/Hatred_Tweet.git
-cd Hatred_Tweet
-pip install -r requirements.txt
-make clean install test                # install and test
-```
-Functionnal test with a script:
-
-```bash
-cd
-mkdir tmp
-cd tmp
-Hatred_Tweet-run
-```
+The best model obtained an accuracy of 0.89% and an AUC score of 0.92%.
