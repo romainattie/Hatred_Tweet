@@ -12,9 +12,7 @@ app.add_middleware(
     allow_headers=["*"],  # Allows all headers
 )
 
-from Hatred_Tweet.predict import harassment_predict
-
-
+from inappropriate_tweets_detection.predict import harassment_predict
 
 @app.get("/")
 def test():
@@ -25,3 +23,7 @@ def predict(text):
     return {
         'Result': harassment_predict(text)
     }
+
+@app.get("/predict_deep")
+def predict_deep(text):
+    return {'Result': 'In development'}

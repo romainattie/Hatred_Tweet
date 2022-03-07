@@ -1,3 +1,22 @@
+# project id
+PROJECT_ID=tweet-detection
+DOCKER_IMAGE_NAME=tweet_image
+
+# bucket name
+BUCKET_NAME=wagon-data-779-attie
+REGION=europe-west1
+
+
+docker_build:
+	docker build -t eu.gcr.io/${PROJECT_ID}/${DOCKER_IMAGE_NAME} .
+
+docker_run_locally:
+	docker run -e PORT=8000 -p 8080:8000 eu.gcr.io/${PROJECT_ID}/${DOCKER_IMAGE_NAME}
+# -e = création de variable d'environnement qui vaut 8000
+
+docker_push_gcr:
+	docker push eu.gcr.io/${PROJECT_ID}/${DOCKER_IMAGE_NAME}
+
 # ----------------------------------
 #          INSTALL & TEST
 # ----------------------------------

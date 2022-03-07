@@ -14,7 +14,7 @@ from sklearn.naive_bayes import BernoulliNB
 from sklearn.compose import ColumnTransformer
 from imblearn.pipeline import make_pipeline
 from sklearn.utils import resample
-from xgboost import XGBRegressor
+# from xgboost import XGBRegressor
 
 
 class FirstColumnSelector(BaseEstimator, TransformerMixin):
@@ -53,8 +53,8 @@ def get_pipeline(model_name='LogisticRegression',
         model = LogisticRegression(max_iter=5000, verbose=1)
     elif model_name == 'BernoulliNB':
         model = BernoulliNB()
-    elif model_name == 'XGBRegressor':
-        model = XGBRegressor(max_depth=10, n_estimators=300, learning_rate=0.1)
+    # elif model_name == 'XGBRegressor':
+    #     model = XGBRegressor(max_depth=10, n_estimators=300, learning_rate=0.1)
     else:
         raise ValueError('No good model_name choice')
 
